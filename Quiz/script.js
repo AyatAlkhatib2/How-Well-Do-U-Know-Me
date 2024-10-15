@@ -1,4 +1,4 @@
-function quizScore {
+function quizScore() {
     let score = 0; 
     let userName = document.getElementById('username').value;
     let q1 = document.querySelector('input[name="q1"]:checked')?.value;
@@ -26,48 +26,20 @@ function quizScore {
         q10:"Turmasaya"
     };
 
-    if (q1 === correctAnswer.q1){
-         score += 1
+    // Check if the answer is correct and increment the score if correct
+    if (userAnswers[`q${questionNumber}`] === correctAnswer[`q${questionNumber}`]) {
+        score += 1;
+        else {
+            showResult(); // If the last question is answered, show the result
+        }
+    } else {
+        // Alert the user to select an answer before proceeding
+        alert("Please select an answer before proceeding.");
     }
-
-    if (q2 === correctAnswer.q2){
-        score += 1
-    }
-
-    if (q3 === correctAnswer.q3){
-        score += 1
-    }
-
-    if (q4 === correctAnswer.q4){
-        score += 1
-    }
-
-    if (q5 === correctAnswer.q5){
-        score += 1
-    }
-
-    if (q6 === correctAnswer.q6){
-        score += 1
-    }
-
-    if (q7 === correctAnswer.q7){
-        score += 1
-    }
-
-    if (q8 === correctAnswer.q8){
-        score += 1
-    }
-
-    if (q9 === correctAnswer.q9){
-        score += 1
-    }
-
-    if (q10 === correctAnswer.q10){
-        score += 1
-    }
-
-    let totalQuestions = 10; 
-
+}
+function showResult() {
     let resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    let userName = document.getElementById('username')?.value || 'User'; // Optional: get user name if there's an input field
     resultDiv.innerHTML = `${userName}, you scored ${score} out of ${totalQuestions}!`;
 }
