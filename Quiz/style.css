@@ -1,7 +1,7 @@
 /* General styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f0f8ff; /* Light blue background for a quiz-like feel */
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,7 +13,7 @@ body {
 .container {
     width: 90%;
     max-width: 600px;
-    background-color: white;
+    background-color: white; /* White background for the quiz container */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -23,11 +23,12 @@ body {
 h1 {
     font-size: 2rem;
     color: #333;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-size: 1.5rem;
-    color: #666;
+    color: #4CAF50; /* Green text for questions */
     margin-bottom: 20px;
 }
 
@@ -43,7 +44,7 @@ section.active {
 
 /* Button styling */
 button {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green background for buttons */
     color: white;
     border: none;
     border-radius: 5px;
@@ -51,6 +52,7 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 button:hover {
@@ -118,3 +120,4 @@ input#username {
         font-size: 1rem;
     }
 }
+

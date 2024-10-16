@@ -1,3 +1,28 @@
+let currentQuestion = 0;
+const totalQuestions = 10; // Update if you add more questions
+
+// This function starts the quiz and hides the initial section
+function startQuiz() {
+    const username = document.getElementById('username').value;
+    if (!username) {
+        alert('Please enter your name to start the quiz.');
+        return;
+    }
+
+    document.querySelector('section').style.display = 'none'; // Hide the name input section
+    document.getElementById('quiz-form').style.display = 'block'; // Show the quiz form
+    showQuestion(currentQuestion); // Show the first question
+}
+
+// This function displays the current question
+function showQuestion(index) {
+    const questions = document.querySelectorAll('.question');
+    questions.forEach((q, i) => {
+        q.style.display = (i === index) ? 'block' : 'none'; // Show only the current question
+    });
+}
+
+
 function quizScore() {
     let score = 0; 
     let userName = document.getElementById('username').value;
