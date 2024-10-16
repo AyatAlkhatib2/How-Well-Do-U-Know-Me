@@ -1,123 +1,32 @@
-/* General styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff; /* Light blue background for a quiz-like feel */
-    margin: 0;
+    margin: 20px;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.container {
-    width: 90%;
-    max-width: 600px;
-    background-color: white; /* White background for the quiz container */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
+#quiz-form {
+    margin-top: 20px;
 }
 
-h1 {
-    font-size: 2rem;
-    color: #333;
+.question {
     margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 1.5rem;
-    color: #4CAF50; /* Green text for questions */
-    margin-bottom: 20px;
-}
-
-/* Hide all question sections initially */
-section {
-    display: none;
-}
-
-/* Display the first question */
-section.active {
-    display: block;
-}
-
-/* Button styling */
 button {
-    background-color: #4CAF50; /* Green background for buttons */
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Darker green */
 }
 
-button:disabled {
-    background-color: #ddd;
-    cursor: not-allowed;
-}
-
-/* Result styling */
 #result {
-    display: none;
-    font-size: 1.5rem;
-    color: #4CAF50;
     margin-top: 20px;
+    font-size: 18px;
 }
-
-/* Radio button label styling */
-label {
-    display: block;
-    margin: 10px 0;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-input[type="radio"] {
-    margin-right: 10px;
-}
-
-/* Additional spacing for better layout */
-.form-group {
-    margin: 20px 0;
-}
-
-input#username {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-/* Media query for mobile responsiveness */
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    button {
-        font-size: 0.9rem;
-    }
-
-    label {
-        font-size: 1rem;
-    }
-}
-
